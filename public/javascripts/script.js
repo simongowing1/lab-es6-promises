@@ -65,9 +65,6 @@ addFood(mashPotatoes[0], '#mashPotatoes').then(() => {
 Promise.all([makeFood(steak, '#steak', 'public/images/steak.jpg'),
             makeFood(mashPotatoes, '#mashPotatoes', 'public/images/mashPotatoes.jpg'),
             makeFood(brusselSprouts, '#brusselSprouts', 'public/images/brusselSprouts.jpg')]).then (() => {
-      let body = document.querySelector('body').innerHTML;
-      let dinnerIsServed = document.createElement('div')
-      dinnerIsServed.innerHTML = `<button onclick="new Audio('public/media/dinnerIsServed.mp3').play()">Dinner is served.</button>`
-      console.log(dinnerIsServed);
+     document.body.innerHTML += `<button onclick="new Audio('public/media/dinnerIsServed.mp3').play()">Dinner is served.</button>`
     //body.appendChild(dinnerIsServed)
 })
